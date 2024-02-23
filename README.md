@@ -1,0 +1,3 @@
+Arduino MCP2515 CAN-Utils library for Battery Swapping Stations
+--------------------------------------------------------------------
+This is a simple arduino library that I wrote, in order to make better use of autowp's [arduino-mcp2515](https://github.com/autowp/arduino-mcp2515.git) library for CAN-bus communication, in the context of my work, developing the control software of a Battery Swapping Station. This simple library includes a list of functions and enumerations that I've found useful to define, in order to reutilize throughout my code.
