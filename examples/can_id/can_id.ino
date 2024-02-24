@@ -10,13 +10,13 @@ canUtils::MODULE_ADDRESS originAddress;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  canId[0] = canUtils::createCanMsgCanId(canUtils::ULTRA_LOW,   canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::EIGHT_CHANNEL_RELAY, canUtils::SLOT1);
-  canId[1] = canUtils::createCanMsgCanId(canUtils::LOW_,        canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT2);
-  canId[2] = canUtils::createCanMsgCanId(canUtils::MEDIUM_LOW,  canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT3);
-  canId[3] = canUtils::createCanMsgCanId(canUtils::MEDIUM,      canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT4);
-  canId[4] = canUtils::createCanMsgCanId(canUtils::MEDIUM_HIGH, canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT5);
-  canId[5] = canUtils::createCanMsgCanId(canUtils::HIGH_,       canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::SLOT6,               canUtils::EIGHT_CHANNEL_RELAY);
-  canId[6] = canUtils::createCanMsgCanId(canUtils::ULTRA_HIGH,  canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::SLOT7,               canUtils::CONTROL_CENTER);
+  canId[0] = canUtils::createCanMsgCanId(canUtils::ULTRA_LOW,   canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::EIGHT_CHANNEL_RELAY, canUtils::SLOT1);
+  canId[1] = canUtils::createCanMsgCanId(canUtils::LOW_,        canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT2);
+  canId[2] = canUtils::createCanMsgCanId(canUtils::MEDIUM_LOW,  canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT3);
+  canId[3] = canUtils::createCanMsgCanId(canUtils::MEDIUM,      canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT4);
+  canId[4] = canUtils::createCanMsgCanId(canUtils::MEDIUM_HIGH, canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::CONTROL_CENTER,      canUtils::SLOT5);
+  canId[5] = canUtils::createCanMsgCanId(canUtils::HIGH_,       canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::SLOT6,               canUtils::EIGHT_CHANNEL_RELAY);
+  canId[6] = canUtils::createCanMsgCanId(canUtils::ULTRA_HIGH,  canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE, canUtils::SLOT7,               canUtils::CONTROL_CENTER);
 
 }
 

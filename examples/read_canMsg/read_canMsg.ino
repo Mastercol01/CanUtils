@@ -27,13 +27,13 @@ void setup() {
 
   canMsg0.can_id = 
   canUtils::createCanMsgCanId(canUtils::ULTRA_LOW, 
-                              canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE,
+                              canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE,
                               canUtils::SLOT2, 
                               canUtils::SLOT1);
 
   canMsg1.can_id = 
   canUtils::createCanMsgCanId(canUtils::ULTRA_HIGH, 
-                              canUtils::STATES_OF_EIGHT_CHANNEL_RELAY_MODULE,
+                              canUtils::net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE,
                               canUtils::SLOT1, 
                               canUtils::SLOT2);
 

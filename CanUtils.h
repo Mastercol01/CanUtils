@@ -38,8 +38,12 @@ enum MODULE_ADDRESS
 enum ACTIVITY_CODE 
 {
   ACTIVITY_CODE_NONE = 0,
-  STATES_OF_EIGHT_CHANNEL_RELAY_MODULE = 1,
-  byCommand_SET_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE = 2
+  net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE = 1,
+  rpy2net_SET_STATE_OF_EIGHT_CHANNEL_RELAY_MODULE   = 2,
+  rpy2net_SET_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE  = 3,
+  rpy2net_FLIP_STATE_OF_EIGHT_CHANNEL_RELAY_MODULE  = 4,
+  rpy2net_FLIP_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE = 5,
+0
 };
 
 uint32_t createCanMsgCanId(PRIORITY_LEVEL priorityLevel, ACTIVITY_CODE activityCode, MODULE_ADDRESS destinationAddress, MODULE_ADDRESS originAddress);
@@ -56,7 +60,8 @@ void visualizeCanNetwork(MCP2515& canNetwork, struct can_frame* p_canMsg,
                          MODULE_ADDRESS originAddressAllowed      = MODULE_ADDRESS_NONE);
 
 MCP2515::ERROR readCanMsg(MCP2515& canNetwork, struct can_frame* p_canMsg, 
-                          MODULE_ADDRESS destinationAddressAllowed = MODULE_ADDRESS_NONE);
+                          MODULE_ADDRESS destinationAddressAllowed = MODULE_ADDRESS_NONE,
+                          MODULE_ADDRESS originAddressAllowed      = MODULE_ADDRESS_NONE);
 void stdCanNetworkSetUp(MCP2515& canNetwork);
 
 
