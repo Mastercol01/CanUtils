@@ -37,15 +37,36 @@ enum MODULE_ADDRESS
 
 enum ACTIVITY_CODE 
 {
-  ACTIVITY_CODE_NONE = 0,
-  net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE = 1,
-  rpy2net_SET_STATE_OF_EIGHT_CHANNEL_RELAY_MODULE   = 2,
-  rpy2net_SET_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE  = 3,
-  rpy2net_FLIP_STATE_OF_EIGHT_CHANNEL_RELAY_MODULE  = 4,
-  rpy2net_FLIP_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE = 5,
+  ACTIVITY_CODE_NONE                                      = 0,
+  net2rpy_STATES_INFO_OF_EIGHT_CHANNEL_RELAY_MODULE       = 1,
+  rpy2net_SET_STATE_OF_EIGHT_CHANNEL_RELAY_MODULE         = 2,
+  rpy2net_SET_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE        = 3,
+  rpy2net_FLIP_STATE_OF_EIGHT_CHANNEL_RELAY_MODULE        = 4,
+  rpy2net_FLIP_STATES_OF_EIGHT_CHANNEL_RELAY_MODULE       = 5,
+  net2rpy_BATTERY_DATA_0                                  = 6, 
+  net2rpy_BATTERY_DATA_1                                  = 7,
+  net2rpy_BATTERY_DATA_2                                  = 8,
+  net2rpy_BATTERY_DATA_3                                  = 9,
+  net2rpy_BATTERY_DATA_4                                  = 10,
+  net2rpy_BATTERY_DATA_5                                  = 11,
+  net2rpy_BATTERY_DATA_6                                  = 12,
+  net2rpy_BATTERY_DATA_7                                  = 13,
+  net2rpy_BATTERY_DATA_8                                  = 14,
+  net2rpy_BATTERY_DATA_9                                  = 15,
+  net2rpy_BATTERY_DATA_10                                 = 16,
+  net2rpy_PERIPHERALS_STATES_OF_BATTERY_SLOT_MODULE       = 17,
+  rpy2net_SET_SOLENOID_STATE_OF_BATTERY_SLOT_MODULE       = 18,
+  rpy2net_SET_SOLENOIDS_STATES_OF_BATTERY_SLOT_MODULE     = 19,
+  rpy2net_FLIP_SOLENOID_STATE_OF_BATTERY_SLOT_MODULE      = 20,
+  rpy2net_FLIP_SOLENOIDS_STATES_OF_BATTERY_SLOT_MODULE    = 21,
+  rpy2net_FLIP_SOLENOIDS_STATES_OF_BATTERY_SLOT_MODULE    = 21,
+  rpy2net_SET_LED_STRIP_STATE_OF_BATTERY_SLOT_MODULE      = 22
 };
 
-uint32_t createCanMsgCanId(PRIORITY_LEVEL priorityLevel, ACTIVITY_CODE activityCode, MODULE_ADDRESS destinationAddress, MODULE_ADDRESS originAddress);
+uint32_t createCanMsgCanId(PRIORITY_LEVEL priorityLevel, 
+                           ACTIVITY_CODE activityCode, 
+                           MODULE_ADDRESS destinationAddress, 
+                           MODULE_ADDRESS originAddress);
 PRIORITY_LEVEL getPriorityLevelFromCanMsgCanId(uint32_t canId);
 ACTIVITY_CODE getActivityCodeFromCanMsgCanId(uint32_t canId);
 MODULE_ADDRESS getDestinationAddressFromCanMsgCanId(uint32_t canId);
