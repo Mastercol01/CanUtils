@@ -98,12 +98,12 @@ MCP2515::ERROR readCanMsg(MCP2515& canNetwork, struct can_frame* p_canMsg,
   MCP2515::ERROR readError = canNetwork.readMessage(p_canMsg);
   if (readError == MCP2515::ERROR_OK){
     if (destinationAddressAllowed != MODULE_ADDRESS_NONE){
-      if (destinationAddressAllowed != getDestinationAddressFromCanMsgCanId(p_canMsg->can_id;)){
+      if (destinationAddressAllowed != getDestinationAddressFromCanMsgCanId(p_canMsg->can_id)){
         readError = MCP2515::ERROR_FAIL;
       }
     }
     if (originAddressAllowed != MODULE_ADDRESS_NONE){
-      if (originAddressAllowed != getOriginAddressFromCanMsgCanId(p_canMsg->can_id;)){
+      if (originAddressAllowed != getOriginAddressFromCanMsgCanId(p_canMsg->can_id)){
         readError = MCP2515::ERROR_FAIL;
       }
     }
