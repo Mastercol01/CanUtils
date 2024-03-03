@@ -60,7 +60,9 @@ enum ACTIVITY_CODE
   rpy2net_FLIP_SOLENOID_STATE_OF_BATTERY_SLOT_MODULE      = 20,
   rpy2net_FLIP_SOLENOIDS_STATES_OF_BATTERY_SLOT_MODULE    = 21,
   rpy2net_SET_LED_STRIP_STATE_OF_BATTERY_SLOT_MODULE      = 22,
+  rpy2net_RESET_BATTERY_CAN_BUS_ERROR_STATE_AND_TIMER     = 23,
 };
+
 
 uint32_t createCanMsgCanId(PRIORITY_LEVEL priorityLevel, 
                            ACTIVITY_CODE activityCode, 
